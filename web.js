@@ -18,10 +18,10 @@ http.createServer(function (request, response)) {
 	fs.readFile('./index.html', function(error, content)) {
 		if(error) {
 			response.writeHead(500);
-			response.end(;)
+			response.end();
 		}
 		else {
-			response.writeHEad(200, {'Content-Type': 'text/html'});
+			response.writeHead(200, {'Content-Type': 'text/html'});
 			response.end(content, 'utf-8');
 		}
 	}
